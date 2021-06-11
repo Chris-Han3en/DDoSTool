@@ -54,9 +54,9 @@ namespace DDoSTool
             try
             {
                 var Username = wb.FindElement(By.XPath("/html/body/div[2]/main/div/form/div[1]/input"));
-                Username.SendKeys("sdasasdaasd");
+                Username.SendKeys("");
                 var Password = wb.FindElement(By.XPath("//*[@id=\"password\"]"));
-                Password.SendKeys("P@33w0rd");
+                Password.SendKeys("");
                 var LoginButton = wb.FindElement(By.XPath("/html/body/div[2]/main/div/form/div[4]/button"));
                 LoginButton.Click();
             }
