@@ -24,9 +24,27 @@ namespace DDoSTool
             Console.ReadKey();
             Console.Clear();
             Console.WriteLine("Enter ip you want bye bye (example 127.0.0.1)");
-            IP = Console.ReadLine();
+            try
+            {
+                IP = Console.ReadLine();
+            }
+            catch
+            {
+                Console.WriteLine("Incorrect IP format");
+                MessageBox.Show("Incorrect format");
+                begin();
+            }
             Console.WriteLine("How long you want bye bye (max 300, min 20)");
-            seconds = Convert.ToInt32(Console.ReadLine());
+            try
+            {
+                seconds = Convert.ToInt32(Console.ReadLine());
+            }
+            catch
+            {
+                Console.WriteLine("Incorrect second format");
+                MessageBox.Show("Incorrect format");
+                begin();
+            }
             if (seconds > 300 || seconds < 20)
             {
                 Console.Clear();
